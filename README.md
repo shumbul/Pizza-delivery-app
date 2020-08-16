@@ -1,5 +1,5 @@
 # Pizza-delivery-app
-A pizza delivery app built with Django
+A pizza delivery app built with Django that allows basic functionalities such as user and admin authentication, view available options, add to cart, place your order, etc...
 
 ## The application allows the following features:
 
@@ -13,14 +13,14 @@ A pizza delivery app built with Django
 
 ## What I learn from this project:
 
-Django
-Models
-create read update delete operations
-Object Relational Mapping With Database
-Authentication
-Message requests
-Django Inbuilt Libraries
-security measures
+Django <br>
+Models <br>
+Create, read, update and delete operations <br>
+Object Relational Mapping With Database <br>
+Authentication <br>
+Message requests <br>
+Django Inbuilt Libraries <br>
+security measures <br>
 
 ## Technologies involved: 
 HTML, CSS, Pthon, Django, MySQL
