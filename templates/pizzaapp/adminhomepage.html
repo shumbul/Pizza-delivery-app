@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand">Welcome Admin</a>
+  <a href="/adminorders/" class="nav-item" style="text-decoration: none;color: black">
+  	all orders
+  </a>
+  <!-- <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+ -->
+ 	<a class="btn btn-danger" href="/adminlogout/">logout</a>
+</nav>
+
+
+<form method="post" action="/addpizza/">
+	{% csrf_token %}
+	<div class="container" style="width: 530px;display: block;margin: auto">
+		<input type="text" placeholder="name" class="form-control" name="pizza" style="width: 200px;display: inline;margin: auto">
+		<input type="text" class="form-control" placeholder="price" name="price" style="width: 200px;display: inline;margin: auto">
+	<input style="display: inline" type="submit" value="add" name="" class="btn btn-success">
+	</div>
+</form>
+
+<div class="container" style="width: 50%;display: block;margin: auto;margin-top: 80px">
+	<table style="width: 50%">
+	<tr>
+		<th>Pizza Name</th>
+		<th>Price</th>
+		<th>delete</th>
+	</tr>
+	{% for pizza in pizzas%}
+	<tr>
+		<td>{{pizza.name}}</td>
+		<td>{{pizza.price}}</td>
+		<td><a href="/deletepizza/{{pizza.id}}/" class="btn btn-danger">delete</a></td>
+	</tr>
+	{% endfor %}
+</table>
+</div>
+{% endblock %}
